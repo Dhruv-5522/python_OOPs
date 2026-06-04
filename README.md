@@ -1,5 +1,5 @@
 # OOPs-principal-python
-# Lab Work 5.5 - Python OOP Tasks
+# Python OOP Tasks
 
 This repository contains the implementation for Lab Assignment 5.5. The objective of this project is to apply core Object-Oriented Programming (OOP) principles—Abstraction, Encapsulation, Inheritance, and Polymorphism—using Python.
 
