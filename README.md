@@ -1,20 +1,31 @@
-# OOPs-principal-python
-# Python OOP Tasks
+# Employee Management System
 
-This repository contains the implementation for Lab Assignment 5.5. The objective of this project is to apply core Object-Oriented Programming (OOP) principles—Abstraction, Encapsulation, Inheritance, and Polymorphism—using Python.
+## Project Overview
+This project is a console-based Employee Management System built in Python. The main objective is to implement core Object-Oriented Programming (OOP) concepts such as Classes, Inheritance, Encapsulation, Method Overriding, and Polymorphism. 
 
-## Implementations Included
-
-* **Shape Structures:** Created an abstract `Shape` base class to verify that directly instantiating it throws an error. It includes functional subclasses for `Rectangle` and `Circle` to calculate area and perimeter. I also included an `IncompleteShape` class to test how Python throws an error when a mandatory abstract method is omitted.
-* **ML Model Interface:** Designed an `MLModel` abstract class to enforce a common interface. Subclasses `LinearRegressionModel` and `DecisionTreeModel` implement their own versions of `train()` and `predict()` to show polymorphism in action.
-* **Bank Management System:** Built a banking simulation starting with a `BankAccount` class that uses private attributes (`__account_number` and `__balance`) to demonstrate encapsulation. Extended this into a `SavingsAccount` that calculates and applies interest, and a `CurrentAccount` that overrides withdrawals to allow transactions within an overdraft limit.
+The system allows creating and managing records for different roles: general Persons, Employees, and Managers, while maintaining a clean, user-friendly interactive menu.
 
 ---
 
-## How to Run
+## OOP Concepts Implemented
 
-1. Open your terminal or command prompt.
-2. Run the script directly using Python:
+* **Classes & Objects**: Created base classes (`Person`, `Employee`) and specialized derived classes (`Manager`, `Developer`).
+* **Inheritance**: Derived classes inherit core properties like `name` and `age` from the parent `Person` class using the `super()` function.
+* **Encapsulation**: Sensitive attributes such as `__employee_id` and `__salary` are kept private (using double underscores) and are only accessible through proper Getter and Setter methods.
+* **Method Overriding**: The `display()` method has been overridden in the child classes to print specific details tailored to that role (e.g., Department for Managers).
+* **Constructor & Destructor**: Implemented `__init__` constructors to initialize object attributes and a basic structure for resource management/cleanup.
 
-```bash
-python main.py
+---
+
+## Design Assumptions & Decisions
+1. **Pythonic Method Overloading**: Since Python does not support traditional method overloading by default, we implemented it cleanly using default arguments (`None`) in the constructor to allow flexible object creation.
+2. **Explicit Memory Management**: In the exit choice (`Option 5`), lists are explicitly cleared to demonstrate proper cleanup and triggering of destruction principles before the application quits.
+
+---
+
+## How to Run the Project
+1. Make sure you have Python installed on your system.
+2. Open your terminal or command prompt in the project directory.
+3. Run the following command:
+   ```bash
+   python main.py
